@@ -5,11 +5,27 @@
 % Definitions
 % ====================
 
-\definecolor{labsixorange}{RGB}{243, 111, 33}
+% Colors from http://web.mit.edu/graphicidentity/colors.html
+% \definecolor{utred}{cmyk}{0.0, 0.81, 0.63, 0.37}
+
+% cmyk(0,82,67,35) # red
+% cmyk(0,29,53,82) # dark grey
+% cmyk(2,1,0,15) Accent 5 (light grey)
+% \definecolor{utred}{cmyk}{0.0, 0.81, 0.63, 0.37}
+
+% \definecolor{utred}{cmyk}{0.0,0.82,0.67,0.35}
+\definecolor{utred}{RGB}{165, 30, 55}
+\definecolor{utdarkgray}{RGB}{51,51,51}
+\definecolor{utlightgray}{RGB}{211, 214, 216}
+
+% cmyk(0,81,63,37)
+% https://convertacolor.com/
+
+
 
 % Extra colors
 \definecolor{lightgray}{RGB}{240, 240, 240}
-\definecolor{lightorange}{RGB}{255, 240, 230}
+\definecolor{lightorange}{RGB}{255, 245, 242}
 
 % ====================
 % Theme
@@ -20,24 +36,23 @@
 \setbeamercolor{palette secondary}{fg=black,bg=white}
 \setbeamercolor{palette tertiary}{bg=black,fg=white}
 \setbeamercolor{palette quaternary}{fg=black,bg=white}
-\setbeamercolor{structure}{fg=labsixorange}
+\setbeamercolor{structure}{fg=utred}
 
 % Headline
-\setbeamercolor{headline}{fg=white,bg=labsixorange}
-\setbeamercolor{headline rule}{bg=black}
+\setbeamercolor{headline}{fg=white,bg=utred}
 
 % Block
-\setbeamercolor{block title}{fg=labsixorange,bg=white}
-\setbeamercolor{block separator}{bg=black}
+\setbeamercolor{block title}{fg=utred,bg=white}
+\setbeamercolor{block separator}{bg=utdarkgray}
 \setbeamercolor{block body}{fg=black,bg=white}
 
 % Alert Block
-\setbeamercolor{block alerted title}{fg=labsixorange,bg=lightorange}
+\setbeamercolor{block alerted title}{fg=utred,bg=lightorange}
 \setbeamercolor{block alerted separator}{bg=black}
 \setbeamercolor{block alerted body}{fg=black,bg=lightorange}
 
 % Example Block
-\setbeamercolor{block example title}{fg=labsixorange,bg=lightgray}
+\setbeamercolor{block example title}{fg=utred,bg=lightgray}
 \setbeamercolor{block example separator}{bg=black}
 \setbeamercolor{block example body}{fg=black,bg=lightgray}
 
@@ -45,7 +60,7 @@
 \setbeamercolor{heading}{fg=black}
 
 % Itemize
-\setbeamercolor{item}{fg=labsixorange}
+\setbeamercolor{item}{fg=utred}
 
 % Bibliography
 \setbeamercolor{bibliography item}{fg=black}

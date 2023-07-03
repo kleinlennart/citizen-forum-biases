@@ -7,11 +7,27 @@
 % Packages
 % ====================
 
+% https://github.com/deselaers/latex-beamerposter
+
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
-\usepackage[size=custom,width=120,height=72,scale=1.0]{beamerposter}
+% \usepackage[size=custom,width=120,height=72,scale=1.1]{beamerposter}
+\usepackage[orientation=landscape,size=a0,scale=1.2]{beamerposter}
+
+
+% fonts are scaled to 1.0 (1.4 in Overleaf example)
+% \usepackage[orientation=portrait,size=a0,scale=1.4]{beamerposter}
+
+
+% width: max print 40'' (inches)
+% Poster boards provided at the conference: 4′ x 8′ feet
+% (48 inches/121.92 cm in height by 
+
+% width: 96 inches/243.84 cm in )
+
 \usetheme{gemini}
-\usecolortheme{gemini}
+\usecolortheme{ut}
+
 \usepackage{graphicx}
 \usepackage{booktabs}
 \usepackage{tikz}
@@ -36,20 +52,20 @@
 % Title
 % ====================
 
-\title{Some fancy title: followed by some more text}
+\title{Should I Go? Participation Biases in Citizen\\ Deliberation Forums: Evidence From Germany}
 
-\author{Alyssa P. Hacker \inst{1} \and Ben Bitdiddle \inst{2} \and Lem E. Tweakit \inst{2}}
+\author{Lennart Klein \inst{1}}
 
-\institute[shortinst]{\inst{1} Some Institute \samelineand \inst{2} Another Institute}
+\institute[shortinst]{\inst{1} University of Tübingen}
 
 % ====================
 % Footer (optional)
 % ====================
 
 \footercontent{
-  \href{https://www.example.com}{https://www.example.com} \hfill
-  ABC Conference 2025, New York --- XYZ-1234 \hfill
-  \href{mailto:alyssa.p.hacker@example.com}{alyssa.p.hacker@example.com}}
+  \href{https://github.com/kleinlennart/citizen-forum-biases}{https://github.com/kleinlennart/citizen-forum-biases} \hfill
+    THE 46TH ANNUAL SCIENTIFIC MEETING OF THE INTERNATIONAL SOCIETY OF POLITICAL PSYCHOLOGY, MONTRÉAL\hfill
+  \href{mailto:lennart.klein@student.uni-tuebingen.de}{lennart.klein@student.uni-tuebingen.de}}
 % (can be left out to remove footer)
 
 % ====================
@@ -57,7 +73,8 @@
 % ====================
 
 % use this to include logos on the left and/or right side of the header:
-% \logoright{\includegraphics[height=7cm]{logo1.pdf}}
+% \logoright{\includegraphics[height=7cm]{images/logo_uni.pdf}}
+\logoright{\includegraphics[height=6cm]{images/logo_uni_white.pdf}}
 % \logoleft{\includegraphics[height=7cm]{logo2.pdf}}
 
 % ====================
@@ -72,40 +89,39 @@
 
 \begin{column}{\colwidth}
 
-  \begin{block}{A block title}
+  \begin{block}{Motivation}
 
-    Some block contents, followed by a diagram, followed by a dummy paragraph.
+  \begin{itemize}
+      \item "Letzte Generation"
+      \item Protest movement 
+      \item call for more citizen councel ("Bürgerrat") for climate policy
+      \item Klimawandel, wicked issues
+      \item Neue Probleme, alte Institutionen
+      \item Reccent Raise in forums in Germany (see Figure 1)
+      \item 
+  \end{itemize}
 
-    \begin{figure}
-      \centering
-      \begin{tikzpicture}[scale=6]
-        \draw[step=0.25cm,color=gray] (-1,-1) grid (1,1);
-        \draw (1,0) -- (0.2,0.2) -- (0,1) -- (-0.2,0.2) -- (-1,0)
-          -- (-0.2,-0.2) -- (0,-1) -- (0.2,-0.2) -- cycle;
-      \end{tikzpicture}
-      \caption{A figure caption.}
-    \end{figure}
 
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ultricies
-    eget libero ac ullamcorper. Integer et euismod ante. Aenean vestibulum
-    lobortis augue, ut lobortis turpis rhoncus sed. Proin feugiat nibh a
-    lacinia dignissim. Proin scelerisque, risus eget tempor fermentum, ex
-    turpis condimentum urna, quis malesuada sapien arcu eu purus.
+
 
   \end{block}
 
-  \begin{block}{A block containing a list}
+  \begin{block}{Background}
 
-    Nam vulputate nunc felis, non condimentum lacus porta ultrices. Nullam sed
-    sagittis metus. Etiam consectetur gravida urna quis suscipit.
+    \heading{Deliberative Democracy \& Citizen Forums}
+    
+    - Fishkin, Deliberative Polling, etc.
 
-    \begin{itemize}
-      \item \textbf{Mauris tempor} risus nulla, sed ornare
-      \item \textbf{Libero tincidunt} a duis congue vitae
-      \item \textbf{Dui ac pretium} morbi justo neque, ullamcorper
-    \end{itemize}
 
-    Eget augue porta, bibendum venenatis tortor.
+    \heading{Participation Biases}
+
+    \heading{In Germany}
+
+    <Plot development over the years>
+
+    \heading{Participatory Democracy}
+
+    
 
   \end{block}
 
@@ -114,10 +130,6 @@
     This block catches your eye, so \textbf{important stuff} should probably go
     here.
 
-    Curabitur eu libero vehicula, cursus est fringilla, luctus est. Morbi
-    consectetur mauris quam, at finibus elit auctor ac. Aliquam erat volutpat.
-    Aenean at nisl ut ex ullamcorper eleifend et eu augue. Aenean quis velit
-    tristique odio convallis ultrices a ac odio.
 
     \begin{itemize}
       \item \textbf{Fusce dapibus tellus} vel tellus semper finibus. In
@@ -129,14 +141,15 @@
         suscipit felis sapien vel ex.
     \end{itemize}
 
-    Aenean tincidunt risus eros, at gravida lorem sagittis vel. Vestibulum ante
-    ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.
 
   \end{alertblock}
 
 \end{column}
 
 \separatorcolumn
+
+
+% Column 2 ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 
 \begin{column}{\colwidth}
 
@@ -193,108 +206,43 @@
 
   \begin{block}{Nam cursus consequat egestas}
 
-    Nulla eget sem quam. Ut aliquam volutpat nisi vestibulum convallis. Nunc a
-    lectus et eros facilisis hendrerit eu non urna. Interdum et malesuada fames
-    ac ante \textit{ipsum primis} in faucibus. Etiam sit amet velit eget sem
-    euismod tristique. Praesent enim erat, porta vel mattis sed, pharetra sed
-    ipsum. Morbi commodo condimentum massa, \textit{tempus venenatis} massa
-    hendrerit quis. Maecenas sed porta est. Praesent mollis interdum lectus,
-    sit amet sollicitudin risus tincidunt non.
-
-    Etiam sit amet tempus lorem, aliquet condimentum velit. Donec et nibh
-    consequat, sagittis ex eget, dictum orci. Etiam quis semper ante. Ut eu
-    mauris purus. Proin nec consectetur ligula. Mauris pretium molestie
-    ullamcorper. Integer nisi neque, aliquet et odio non, sagittis porta justo.
-
-    \begin{itemize}
-      \item \textbf{Sed consequat} id ante vel efficitur. Praesent congue massa
-        sed est scelerisque, elementum mollis augue iaculis.
-        \begin{itemize}
-          \item In sed est finibus, vulputate
-            nunc gravida, pulvinar lorem. In maximus nunc dolor, sed auctor eros
-            porttitor quis.
-          \item Fusce ornare dignissim nisi. Nam sit amet risus vel lacus
-            tempor tincidunt eu a arcu.
-          \item Donec rhoncus vestibulum erat, quis aliquam leo
-            gravida egestas.
-        \end{itemize}
-      \item \textbf{Sed luctus, elit sit amet} dictum maximus, diam dolor
-        faucibus purus, sed lobortis justo erat id turpis.
-      \item \textbf{Pellentesque facilisis dolor in leo} bibendum congue.
-        Maecenas congue finibus justo, vitae eleifend urna facilisis at.
-    \end{itemize}
 
   \end{block}
 
 \end{column}
-
 \separatorcolumn
+
+
+
+
+
+
+
+%% Column 3 ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 
 \begin{column}{\colwidth}
 
   \begin{exampleblock}{A highlighted block containing some math}
 
-    A different kind of highlighted block.
-
-    $$
-    \int_{-\infty}^{\infty} e^{-x^2}\,dx = \sqrt{\pi}
-    $$
-
-    Interdum et malesuada fames $\{1, 4, 9, \ldots\}$ ac ante ipsum primis in
-    faucibus. Cras eleifend dolor eu nulla suscipit suscipit. Sed lobortis non
-    felis id vulputate.
 
     \heading{A heading inside a block}
 
-    Praesent consectetur mi $x^2 + y^2$ metus, nec vestibulum justo viverra
-    nec. Proin eget nulla pretium, egestas magna aliquam, mollis neque. Vivamus
-    dictum $\mathbf{u}^\intercal\mathbf{v}$ sagittis odio, vel porta erat
-    congue sed. Maecenas ut dolor quis arcu auctor porttitor.
-
     \heading{Another heading inside a block}
-
-    Sed augue erat, scelerisque a purus ultricies, placerat porttitor neque.
-    Donec $P(y \mid x)$ fermentum consectetur $\nabla_x P(y \mid x)$ sapien
-    sagittis egestas. Duis eget leo euismod nunc viverra imperdiet nec id
-    justo.
 
   \end{exampleblock}
 
-  \begin{block}{Nullam vel erat at velit convallis laoreet}
+  \begin{block}{Implications}
 
-    Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
-    inceptos himenaeos. Phasellus libero enim, gravida sed erat sit amet,
-    scelerisque congue diam. Fusce dapibus dui ut augue pulvinar iaculis.
+    
 
-    \begin{table}
-      \centering
-      \begin{tabular}{l r r c}
-        \toprule
-        \textbf{First column} & \textbf{Second column} & \textbf{Third column} & \textbf{Fourth} \\
-        \midrule
-        Foo & 13.37 & 384,394 & $\alpha$ \\
-        Bar & 2.17 & 1,392 & $\beta$ \\
-        Baz & 3.14 & 83,742 & $\delta$ \\
-        Qux & 7.59 & 974 & $\gamma$ \\
-        \bottomrule
-      \end{tabular}
-      \caption{A table caption.}
-    \end{table}
+    for democracy, inclusivity, 
 
-    Donec quis posuere ligula. Nunc feugiat elit a mi malesuada consequat. Sed
-    imperdiet augue ac nibh aliquet tristique. Aenean eu tortor vulputate,
-    eleifend lorem in, dictum urna. Proin auctor ante in augue tincidunt
-    tempor. Proin pellentesque vulputate odio, ac gravida nulla posuere
-    efficitur. Aenean at velit vel dolor blandit molestie. Mauris laoreet
-    commodo quam, non luctus nibh ullamcorper in. Class aptent taciti sociosqu
-    ad litora torquent per conubia nostra, per inceptos himenaeos.
+    posing questions: 
 
-    Nulla varius finibus volutpat. Mauris molestie lorem tincidunt, iaculis
-    libero at, gravida ante. Phasellus at felis eu neque suscipit suscipit.
-    Integer ullamcorper, dui nec pretium ornare, urna dolor consequat libero,
-    in feugiat elit lorem euismod lacus. Pellentesque sit amet dolor mollis,
-    auctor urna non, tempus sem.
+    Idea: human decion making -> institutions
+    ability to deal with wicked issues (CITE) like climate change (causally messy, temporal and geographic discounting, etc. -> systemic risks) 
 
+      
   \end{block}
 
   \begin{block}{References}
