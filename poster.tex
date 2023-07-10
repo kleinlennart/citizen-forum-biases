@@ -1,43 +1,32 @@
-% Gemini theme
+% Based on Gemini theme:
 % https://github.com/anishathalye/gemini
 
-\documentclass[final]{beamer}
-
-% ====================
-% Packages
-% ====================
-
 % https://github.com/deselaers/latex-beamerposter
+\documentclass[final]{beamer}
 
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
-% \usepackage[size=custom,width=120,height=72,scale=1.1]{beamerposter}
-\usepackage[orientation=landscape,size=a0,scale=1.2]{beamerposter}
-
-
-% fonts are scaled to 1.0 (1.4 in Overleaf example)
-% \usepackage[orientation=portrait,size=a0,scale=1.4]{beamerposter}
-
-
-% width: max print 40'' (inches)
-% Poster boards provided at the conference: 4′ x 8′ feet
-% (48 inches/121.92 cm in height by 
-
-% width: 96 inches/243.84 cm in )
+\usepackage[orientation=landscape,size=a0,scale=1.4]{beamerposter}
+% all font scaled to 1.4 
 
 \usetheme{gemini}
-\usecolortheme{ut}
+\usecolortheme{Tuebingen} % my custom Uni Tübingen Theme
 
 \usepackage{graphicx}
 \usepackage{booktabs}
-\usepackage{tikz}
 \usepackage{pgfplots}
 \pgfplotsset{compat=1.14}
 \usepackage{anyfontsize}
+\usepackage{physics} % bold math
 
-% ====================
-% Lengths
-% ====================
+\setlength{\tabcolsep}{10pt} % inter-column space (default: 6pt)
+
+% Bibliography
+\usepackage{natbib}
+\bibliographystyle{chicago-apsr}
+\setcitestyle{aysep={}}
+
+% Lengths ====================
 
 % If you have N columns, choose \sepwidth and \colwidth such that
 % (N+1)*\sepwidth + N*\colwidth = \paperwidth
@@ -48,38 +37,25 @@
 
 \newcommand{\separatorcolumn}{\begin{column}{\sepwidth}\end{column}}
 
-% ====================
-% Title
-% ====================
+% Header ====================
 
-\title{Should I Go? Participation Biases in Citizen\\ Deliberation Forums: Evidence From Germany}
-
+\title{Should I Go? Participation Biases in  Citizen\\Deliberation Forums: Evidence from Germany}
 \author{Lennart Klein \inst{1}}
-
 \institute[shortinst]{\inst{1} University of Tübingen}
 
-% ====================
-% Footer (optional)
-% ====================
+% Footer ====================
 
 \footercontent{
   \href{https://github.com/kleinlennart/citizen-forum-biases}{https://github.com/kleinlennart/citizen-forum-biases} \hfill
-    THE 46TH ANNUAL SCIENTIFIC MEETING OF THE INTERNATIONAL SOCIETY OF POLITICAL PSYCHOLOGY, MONTRÉAL\hfill
+    46th Annual Meeting of the International Society of Political Psychology\hfill
   \href{mailto:lennart.klein@student.uni-tuebingen.de}{lennart.klein@student.uni-tuebingen.de}}
-% (can be left out to remove footer)
 
-% ====================
-% Logo (optional)
-% ====================
 
-% use this to include logos on the left and/or right side of the header:
-% \logoright{\includegraphics[height=7cm]{images/logo_uni.pdf}}
-\logoright{\includegraphics[height=6cm]{images/logo_uni_white.pdf}}
-% \logoleft{\includegraphics[height=7cm]{logo2.pdf}}
+% Logo ====================
 
-% ====================
-% Body
-% ====================
+\logoright{\includegraphics[height=5cm]{images/logo_uni_white.pdf}}
+
+% Body ====================
 
 \begin{document}
 
@@ -87,65 +63,58 @@
 \begin{columns}[t]
 \separatorcolumn
 
+% ----------------------------------------------------------------
 \begin{column}{\colwidth}
 
   \begin{block}{Motivation}
 
   \begin{itemize}
-      \item "Letzte Generation"
-      \item Protest movement 
-      \item call for more citizen councel ("Bürgerrat") for climate policy
-      \item Klimawandel, wicked issues
-      \item Neue Probleme, alte Institutionen
-      \item Reccent Raise in forums in Germany (see Figure 1)
-      \item 
+        \item Increasing popularity of Citizen's Councils in Germany (\textbf{Table \ref{tab:councils}})
+      \item Climate activists group \textit{``Letzte Generation''} demands a representative Standing Citizen's Council on Climate Change with legislative power
+      \item New Problems, New Institutions? (``Climate Democracy'')
   \end{itemize}
 
+  \vspace{1ex}
+  > \textbf{``How attitudinally and psychologically representative and inclusive are Citizen's Councils?''}        
+  \vspace{2ex}
 
 
-
+  
   \end{block}
 
-  \begin{block}{Background}
+  \begin{block}{Research Background}
 
-    \heading{Deliberative Democracy \& Citizen Forums}
+    \heading{Deliberative Democracy}
+
+    \begin{itemize}
+        \item James S. Fishkin's \citeyearpar{fishkin1991DemocracyDeliberation} classic work on \textit{``Deliberative Polling''}
+    \end{itemize}
     
-    - Fishkin, Deliberative Polling, etc.
+    \textit{\textbf{Important Characteristics:}}
+        \begin{enumerate}
+            \item Random selection
+            \item Voluntary participation
+            \item Political equality
+            \item Representativeness
+            \item Inclusivity
+        \end{enumerate}
 
+\textit{\textbf{The Problem:}}
+
+    \begin{itemize}
+        \item Usually very \textbf{high non-response rates} \citep[e.g.,][]{dean2022CitizenDeliberation}
+        \item Potentially \textbf{high self-selection bias}
+    \end{itemize}
 
     \heading{Participation Biases}
 
-    \heading{In Germany}
-
-    <Plot development over the years>
-
-    \heading{Participatory Democracy}
-
-    
-
-  \end{block}
-
-  \begin{alertblock}{A highlighted block}
-
-    This block catches your eye, so \textbf{important stuff} should probably go
-    here.
-
-
     \begin{itemize}
-      \item \textbf{Fusce dapibus tellus} vel tellus semper finibus. In
-        consequat, nibh sed mattis luctus, augue diam fermentum lectus.
-      \item \textbf{In euismod erat metus} non ex. Vestibulum luctus augue in
-        mi condimentum, at sollicitudin lorem viverra.
-      \item \textbf{Suspendisse vulputate} mauris vel placerat consectetur.
-        Mauris semper, purus ac hendrerit molestie, elit mi dignissim odio, in
-        suscipit felis sapien vel ex.
+        \item \citet{luskin2022DeliberativeDistortions} have explored the social biases during the deliberation process
+        \item  But what about the political and psychological participation biases through self-selection?
     \end{itemize}
 
-
-  \end{alertblock}
-
+  \end{block}
 \end{column}
-
 \separatorcolumn
 
 
@@ -153,105 +122,105 @@
 
 \begin{column}{\colwidth}
 
-  \begin{block}{A block containing an enumerated list}
+  \begin{exampleblock}{Hypotheses}
 
-    Vivamus congue volutpat elit non semper. Praesent molestie nec erat ac
-    interdum. In quis suscipit erat. \textbf{Phasellus mauris felis, molestie
-    ac pharetra quis}, tempus nec ante. Donec finibus ante vel purus mollis
-    fermentum. Sed felis mi, pharetra eget nibh a, feugiat eleifend dolor. Nam
-    mollis condimentum purus quis sodales. Nullam eu felis eu nulla eleifend
-    bibendum nec eu lorem. Vivamus felis velit, volutpat ut facilisis ac,
-    commodo in metus.
+    \heading{H1: \textit{Attitudes} – Participants report higher levels of political\\ interest and trust in institutions than the general public.}
+    \heading{H2: \textit{Personality} – Participants tend to score higher on\\ Assertiveness and Extraversion than the general public.}
+    
+  \end{exampleblock}
 
-    \begin{enumerate}
-      \item \textbf{Morbi mauris purus}, egestas at vehicula et, convallis
-        accumsan orci. Orci varius natoque penatibus et magnis dis parturient
-        montes, nascetur ridiculus mus.
-      \item \textbf{Cras vehicula blandit urna ut maximus}. Aliquam blandit nec
-        massa ac sollicitudin. Curabitur cursus, metus nec imperdiet bibendum,
-        velit lectus faucibus dolor, quis gravida metus mauris gravida turpis.
-      \item \textbf{Vestibulum et massa diam}. Phasellus fermentum augue non
-        nulla accumsan, non rhoncus lectus condimentum.
-    \end{enumerate}
 
+  \begin{block}{Methods}
+
+    \heading{Sampling \& Data Collection}
+    \vspace{-1ex}
+    \begin{itemize}
+        \item Online survey of current and former participants of multiple national and regional citizen's councils
+        \item Survey items matched with constructs in the \textit{German General Social Survey 2021} \textit{(ALLBUS)} 
+        \item Big-Five Factor Scale \citep{goldberg1992DevelopmentMarkers} compared to national dataset from \textit{Open Psychometrics}
+    \end{itemize}
   \end{block}
 
-  \begin{block}{Fusce aliquam magna velit}
+    \begin{block}{A new ‘Deliberative Wave’?}
 
-    Et rutrum ex euismod vel. Pellentesque ultricies, velit in fermentum
-    vestibulum, lectus nisi pretium nibh, sit amet aliquam lectus augue vel
-    velit. Suspendisse rhoncus massa porttitor augue feugiat molestie. Sed
-    molestie ut orci nec malesuada. Sed ultricies feugiat est fringilla
-    posuere.
-
-    \begin{figure}
-      \centering
-      \begin{tikzpicture}
-        \begin{axis}[
-            scale only axis,
-            no markers,
-            domain=0:2*pi,
-            samples=100,
-            axis lines=center,
-            axis line style={-},
-            ticks=none]
-          \addplot[red] {sin(deg(x))};
-          \addplot[blue] {cos(deg(x))};
-        \end{axis}
-      \end{tikzpicture}
-      \caption{Another figure caption.}
-    \end{figure}
-
-  \end{block}
-
-  \begin{block}{Nam cursus consequat egestas}
+    \begin{itemize}
+        \item Citizen's Council participants: $M = \vb{186.88}$ ($SD = 134.19$)
+        \item Example: Respondents in the monthly representative \textit{DeutschlandTREND} survey: $N = \vb{1.000 - 1.500}$
+    \end{itemize}
 
 
-  \end{block}
+\begin{table}[]
+\label{tab:councils}
+\caption{Size of German National Citizen's Councils}
+\begin{tabular}{@{}lll@{}}
+\toprule
+\textbf{Name} & \textbf{Year} & \textbf{N} \\ 
+\midrule
+Citizens' Council on Democracy & 2019 & 160 \\
+Citizens' Council \textit{``Germany's Role in the World''} & 2020 & 160 \\
+Citizens' Council on Education and Learning & 2021 & 500 \\
+Citizens' Council on Climate Change & 2021 & 160 \\
+Citizens' Council on Artificial Intelligence & 2022 & 200/100* \\
+Citizens' Council on Research & 2022 & 55 \\
+Citizens' Forum on the Future of Europe & 2022 & 100 \\
+Citizens' Council \textit{``Change in Nutrition''} & 2023 & 160 \\
+\bottomrule
+\small\textit{Notes:} Data from \textit{Mehr Demokratie e.V.},  *with control group
+\end{tabular}
+\end{table}
 
+\end{block}
+  
 \end{column}
 \separatorcolumn
 
-
-
-
-
-
-
-%% Column 3 ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
-
+%% Column 3 ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 \begin{column}{\colwidth}
 
-  \begin{exampleblock}{A highlighted block containing some math}
+  \begin{alertblock}{Implications \& Discussion}
+    \heading{Normative Democratic Theory and Practice}
+    \vspace{-0.5ex}
+    \begin{itemize}
+        \item Citizen's Councils might not be able to deliver on their ``democratic ideal'' of true representativeness
+        \vspace{0.5ex}
+        \item Could potentially even backfire by alienating less engaged members of the general public, increasing political apathy
+    \end{itemize}
 
-
-    \heading{A heading inside a block}
-
-    \heading{Another heading inside a block}
-
-  \end{exampleblock}
-
-  \begin{block}{Implications}
-
+    \heading{Institutional Design}
+    \vspace{-0.5ex}
+    \begin{itemize}
+        \item Humans only have limited cognitive ability to deal with ``wicked'' systemic issues like climate change due to psychological distance, hyperbolic discounting, etc. \citep{schweizer2022SocialPerception}
+        \vspace{0.5ex}
+        \item This poses further research questions regarding Citizen's Councils' decision-making ability and effectiveness
+    \end{itemize}
     
-
-    for democracy, inclusivity, 
-
-    posing questions: 
-
-    Idea: human decion making -> institutions
-    ability to deal with wicked issues (CITE) like climate change (causally messy, temporal and geographic discounting, etc. -> systemic risks) 
-
       
-  \end{block}
+    \end{alertblock}
+    \begin{block}{Limitations \& Next Steps}
 
-  \begin{block}{References}
+    \begin{itemize}
+        \item Data collection still ongoing 
+        \item Likely smaller sample size than national surveys (limited population size \& non-response)
+        \item Past participation could have induced treatment effects, potentially leading to sampling heterogeneity and confounding
+    \end{itemize}
+    \end{block}
 
-    \nocite{*}
-    \footnotesize{\bibliographystyle{plain}\bibliography{poster}}
+    \vspace{-12mm}
+    \begin{block}{Acknowledgments}
+    Thanks to the \textit{nexus Institut} Berlin for supporting the data collection process and to Paul Sniderman for providing valuable feedback to earlier drafts. 
+    
+    \vspace{-12mm}
+    \end{block}
 
-  \end{block}
 
+    \begin{block}{References}
+    \vspace{-3mm}
+    \footnotesize
+    \begin{flushleft}
+        \bibliography{references}
+    \end{flushleft}
+    \end{block}
+    
 \end{column}
 
 \separatorcolumn
